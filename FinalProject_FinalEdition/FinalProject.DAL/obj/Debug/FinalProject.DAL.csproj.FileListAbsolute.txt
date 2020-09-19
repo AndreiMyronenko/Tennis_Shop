@@ -1,0 +1,12 @@
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\FinalProject.DAL.dll.config
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\FinalProject.DAL.dll
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\FinalProject.DAL.pdb
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\EntityFramework.dll
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\EntityFramework.xml
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\obj\Debug\FinalProject.DAL.csproj.CoreCompileInputs.cache
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\obj\Debug\FinalProject.DAL.csproj.CopyComplete
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\obj\Debug\FinalProject.DAL.dll
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\obj\Debug\FinalProject.DAL.pdb
+D:\Miron\ШАГ\ШАГ\WPF\FinalProject_FinalEdition\FinalProject.DAL\obj\Debug\FinalProject.DAL.csprojAssemblyReference.cache

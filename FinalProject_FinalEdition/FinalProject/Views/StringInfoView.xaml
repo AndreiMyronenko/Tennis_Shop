@@ -1,0 +1,230 @@
+﻿<Controls:MetroWindow x:Class="FinalProject.Views.StringInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Converter="clr-namespace:FinalProject.Infra"
+        xmlns:local="clr-namespace:FinalProject.ViewModels"
+        mc:Ignorable="d"
+        Title="StringInfoView" Height="450" Width="800" SizeToContent="WidthAndHeight"
+        TextOptions.TextRenderingMode="Auto"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:RacquetStringInfoViewModel></local:RacquetStringInfoViewModel>
+    </Window.DataContext>
+    <Window.Resources>
+        <Converter:BoolConverter x:Key="BoolConverter"></Converter:BoolConverter>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel
+            Grid.Row="0">
+                <Image 
+                    Name="image"
+                    Source="{Binding CertainString.Photo}" 
+                    Height="{Binding ElementName=slider, Path=Value}"
+                    Width="{Binding ElementName=slider, Path=Value}">
+                </Image>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBox
+                    Grid.Row="1"
+                    Text="{DynamicResource ChangeSizelbl}"
+                    FontFamily="Times New Roman"
+                    FontSize="20"
+                    HorizontalAlignment="Center"
+                    Margin="10"
+                    TextWrapping="Wrap">
+                </TextBox>
+                <Slider
+                    Name="slider"
+                    Orientation="Horizontal"
+                    Minimum="300"
+                    Maximum="600"
+                    Margin="15"
+                    Style="{DynamicResource FlatSlider}">
+                </Slider>
+                <TextBox
+                    Text="{Binding ElementName=image, Path=Source}">
+
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <WrapPanel
+                Grid.Row="0"
+                Margin="3"
+                HorizontalAlignment="Center">
+                <Label
+                    Content="{Binding CertainString.Title}"
+                    FontFamily="Times New Roman"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Background="Aqua"
+                    Foreground="Chocolate"
+                    Margin="3"
+                    HorizontalAlignment="Center">
+                </Label>
+            </WrapPanel>
+            <StackPanel
+            Grid.Row="1"
+            Margin="0,0,300,10">
+                <Label
+                Margin="0,30,0,30"
+                Content="{DynamicResource Pricelbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Background="Red"
+                Foreground="White">
+                </Label>
+                <Label
+                Content="{DynamicResource Lengthlbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                </Label>
+                <Label
+                Content="{DynamicResource Colorlbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                </Label>
+                <Label
+                Content="{DynamicResource Thicknesslbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                </Label>
+                <Label
+                Content="{DynamicResource Availablelbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                </Label>
+                <Label
+                Content="{DynamicResource Manufacturerlbl}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                </Label>
+            </StackPanel>
+            <StackPanel
+            Grid.Row="1"
+            Margin="300,0,0,10">
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                    Margin="0,30,0,30"
+                    Content="{Binding CertainString.Price}"
+                    FontFamily="Times New Roman"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    Background="Red"
+                    Foreground="White">
+                    </Label>
+                    <Label
+                    FontFamily="Times New Roman"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    Content="{DynamicResource USDlbl}"
+                    Margin="0,30,0,30"
+                    Background="Red"
+                    Foreground="White">
+                    </Label>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                Content="{Binding CertainString.Longitude}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                    </Label>
+                    <Label
+                        FontFamily="Times New Roman"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="5,30,0,30"
+                        Content="{DynamicResource CMlbl}">
+                    </Label>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                Content="{Binding CertainString.Color}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                    </Label>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                Content="{Binding CertainString.Thickness}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                    </Label>
+                    <Label
+                        FontFamily="Times New Roman"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Center"
+                        Margin="5,30,0,30"
+                        Content="{DynamicResource MM2}">
+                    </Label>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                Content="{Binding CertainString.Available, Converter={StaticResource BoolConverter}}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                    </Label>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Label
+                Content="{Binding CertainString.Manufacturer.ManufacturerName}"
+                FontFamily="Times New Roman"
+                FontSize="20"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,30">
+                    </Label>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
